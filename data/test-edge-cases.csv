@@ -1,0 +1,6 @@
+lead_id,name,phone,email,city,education,experience,goal,german_level,source,last_contacted,conversation,notes
+T001,Test Truncated,+91 9812345670,t.trunc@email.com,Pune,BSc Nursing,2 years,Work in Germany,B1,Instagram,2026-09-20,Interested in Germany and asked abo,test
+T002,Email Only,,email.only@email.com,Delhi,BSc Nursing,3 years,Work in Germany,B2,Website,2026-09-21,Has B2 and asked about openings.,test
+T003,No Contact,,,Delhi,BSc Nursing,3 years,Work in Germany,B2,Website,2026-09-21,Has B2.,test
+T004,Sunita Rao,+91 9876543210,sunita.r@email.com,Bangalore,GNM,2 years,Work in Germany,A2,Referral,2026-09-19,Shares phone with family.,test
+T005,Bad Phone,+91 12345,bad@email,Delhi,BSc Nursing,2 years,Work in Germany,B1,Website,2026-9-19,Asked about jobs.,test
