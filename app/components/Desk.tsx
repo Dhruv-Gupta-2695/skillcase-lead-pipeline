@@ -3,6 +3,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import type { Column, Lead } from "@/lib/types";
 import { runEval } from "@/lib/eval";
 import { REVIEW } from "@/lib/config";
+import { buildKpis } from "@/lib/kpis";
 import Drawer, { type HumanAction } from "./Drawer";
 import { toCsv, download } from "./csv";
 
@@ -95,6 +96,9 @@ export default function Desk({ initialLeads, initialRunDate }: { initialLeads: L
     saveHuman(next);
   }
 
+  const approvedIds = useMemo(() => new Set(Object.entries(human).filter(([, h]) => h.action !== "reject" && !(h.action === "override" && h.override === "not_relevant")).map(([id]) => id)), [human]);
+  const kpis = useMemo(() => (processed ? buildKpis(leads, ev ? ev.relevanceAgreement : null, approvedIds) : []), [leads, ev, approvedIds, processed]);
+
   const readyNoFlags = byCol.ready.filter((l) => !(l.classify?.flags.length) && l.review?.verdict === "approve").length;
   const open = leads.find((l) => l.lead_id === openId) ?? null;
 
@@ -115,14 +119,21 @@ export default function Desk({ initialLeads, initialRunDate }: { initialLeads: L
         </div>
       </header>
 
-      <section className="stats" aria-label="Run summary">
-        <div className="stat"><b>{leads.length}</b><span>rows in</span></div>
-        <div className="stat"><b>{leads.filter((l) => l.column === "merged").length}</b><span>duplicates merged</span></div>
-        {ev && <div className="stat"><b>{Math.round(ev.relevanceAgreement * 100)}%</b><span>relevance agrees with sales notes</span></div>}
-        {ev && <div className="stat"><b>{Math.round(ev.overall * 100)}%</b><span>overall agreement with notes</span></div>}
-        <div className={`stat ${flagRate > REVIEW.maxFlagRate ? "warn" : ""}`}><b>{Math.round(flagRate * 100)}%</b><span>flagged by AI reviewer{flagRate > REVIEW.maxFlagRate ? " (above 30%: check calibration)" : ""}</span></div>
-        <div className="stat"><b>{Object.values(human).filter((h) => h.action !== "reject").length}</b><span>approved by a person</span></div>
-      </section>
+      {kpis.length > 0 && (
+        <section className="kpis" aria-label="Key metrics">
+          {kpis.map((k) => (
+            <div key={k.id} className={`kpi ${k.good ? "good" : ""}`}>
+              <span className="kpi-label">{k.label}</span>
+              <b>{k.value}</b>
+              <span className="kpi-sub">{k.sub}</span>
+              {k.bar !== undefined && <div className="bar"><i style={{ width: `${k.bar}%` }} /></div>}
+            </div>
+          ))}
+        </section>
+      )}
+
+
+      {flagRate > REVIEW.maxFlagRate && <p className="error" role="alert">AI reviewer flagged {Math.round(flagRate * 100)}% of leads (above 30%): check reviewer calibration.</p>}
 
       {progress && (
         <div className="progress" role="status">

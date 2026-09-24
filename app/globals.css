@@ -40,8 +40,9 @@ button { cursor: pointer; }
 .btn.danger { color: var(--red); }
 .btn:disabled { opacity: 0.45; cursor: not-allowed; }
 
-.stats { display: flex; flex-wrap: wrap; gap: 28px; padding: 0 28px 16px; border-bottom: 1px solid var(--line); }
-.stat b { display: block; font-size: 22px; font-weight: 700; }
+.stats { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 24px; padding: 12px 28px 14px; border-bottom: 1px solid var(--line); }
+.stat b { display: block; font-size: 17px; font-weight: 700; }
+.stat.label span { font-weight: 700; color: var(--ink); text-transform: none; }
 .stat span { color: var(--muted); font-size: 13px; }
 .stat.warn b { color: var(--red); }
 
@@ -110,3 +111,24 @@ ul.plain { margin: 0; padding-left: 18px; }
 }
 
 .quote a { color: var(--scrub); }
+
+.insights { padding: 4px 28px 8px; }
+.insights h2 { margin: 0 0 8px; font-size: 16px; font-weight: 700; }
+.insights ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 10px; }
+.insights li { background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--scrub); border-radius: var(--radius-m); padding: 10px 12px; }
+.insights li.urgent { border-left-color: var(--gold); }
+.insights li.info { border-left-color: var(--line); }
+.insights p { margin: 0; font-size: 14px; }
+.chip.link { border: 0; cursor: pointer; }
+.chip.link:hover { background: var(--scrub); color: #fff; }
+
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); margin: 0 28px 16px; background: #0c3b39; color: #fff; border-radius: 14px; overflow: hidden; }
+.kpi { padding: 16px 18px; display: flex; flex-direction: column; gap: 2px; border-right: 1px solid rgb(255 255 255 / 0.1); }
+.kpi:last-child { border-right: 0; }
+.kpi b { font-size: 34px; font-weight: 800; line-height: 1.1; letter-spacing: -0.02em; }
+.kpi-label { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; opacity: 0.75; }
+.kpi-sub { font-size: 12.5px; opacity: 0.8; }
+.kpi.good b { color: #7ee0c4; }
+.kpi .bar { background: rgb(255 255 255 / 0.2); margin-top: 6px; }
+.kpi .bar i { background: #7ee0c4; }
+@media (prefers-color-scheme: dark) { .kpis { background: #0f2e2c; } }
