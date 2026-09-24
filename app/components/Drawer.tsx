@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import type { Claim, Lead } from "@/lib/types";
 import { qcOutreach } from "@/lib/qc";
+import { KNOWLEDGE, sourcesForLead } from "@/lib/knowledge";
 
 export interface HumanAction {
   action: "approve" | "edit_approve" | "override" | "reject";
@@ -18,8 +19,14 @@ const STAGE_NAMES: Record<string, string> = {
   prioritize: "Prioritize", outreach: "Outreach", ai_review: "AI review", human_approval: "Human approval",
 };
 
+// Quotes from the lead's row show as-is; knowledge-base citations show the public source and link.
+const Source = ({ quote }: { quote: string }) => {
+  const k = /^KB:/i.test(quote) ? KNOWLEDGE.find((x) => `KB:${x.id}`.toLowerCase() === quote.toLowerCase()) : null;
+  if (!k) return <span className="quote">From the lead: {quote}</span>;
+  return <span className="quote">Public source: {k.url.startsWith("http") ? <a href={k.url} target="_blank" rel="noreferrer">{k.source}</a> : k.source} (checked {k.checked})</span>;
+};
 const Q = ({ c }: { c: Claim }) =>
-  c.text ? <div className="claim">{c.text}{c.quote && <span className="quote">{c.quote}</span>}</div> : null;
+  c.text ? <div className="claim">{c.text}{c.quote && <Source quote={c.quote} />}</div> : null;
 
 export default function Drawer({ lead: l, merged, human, onAct, onUndo, onClose }: {
   lead: Lead; merged: Lead[]; human?: HumanAction;
@@ -102,6 +109,14 @@ export default function Drawer({ lead: l, merged, human, onAct, onUndo, onClose 
             {e.missing_info.length ? <ul className="plain">{e.missing_info.map((m, i) => <li key={i}>{m}</li>)}</ul> : <div className="sub">Nothing missing</div>}
             <h4>Opportunity</h4><Q c={e.opportunity} />
             <h4>Recommended next step</h4><div>{e.next_step}</div>
+            {sourcesForLead(l).length > 0 && (
+              <>
+                <h4>Public sources behind this advice</h4>
+                <ul className="plain">{sourcesForLead(l).map((k) => (
+                  <li key={k.id}>{k.fact} <span className="quote"><a href={k.url} target="_blank" rel="noreferrer">{k.source}</a> (checked {k.checked})</span></li>
+                ))}</ul>
+              </>
+            )}
           </>
         )}
 

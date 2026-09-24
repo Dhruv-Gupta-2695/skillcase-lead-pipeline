@@ -10,7 +10,9 @@
     "test:reviewer": "tsx scripts/seeded-review.ts",
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "export": "tsx scripts/export.ts",
+    "test:holdout": "tsx scripts/holdout.ts"
   },
   "keywords": [],
   "author": "",

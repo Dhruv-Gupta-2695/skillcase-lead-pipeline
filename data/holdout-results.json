@@ -1,0 +1,1592 @@
+[
+  {
+    "lead_id": "H01",
+    "source": {
+      "lead_id": "H01",
+      "name": "Lakshmi Pillai",
+      "phone": "+91 9812300001",
+      "email": "lakshmi.p@email.com",
+      "city": "Thiruvananthapuram",
+      "education": "B.Sc Nursing",
+      "experience": "4 yrs",
+      "goal": "Germany",
+      "german_level": "B2",
+      "source": "WhatsApp",
+      "last_contacted": "2026-09-22",
+      "conversation": "Got my B2 certificate last month. Please call me this week, I want to start the job process."
+    },
+    "human_note": "holdout",
+    "clean": {
+      "name": "Lakshmi Pillai",
+      "first_name": "Lakshmi",
+      "phone": "+919812300001",
+      "email": "lakshmi.p@email.com",
+      "city": "Thiruvananthapuram",
+      "education": "BSc Nursing",
+      "education_category": "nursing_degree",
+      "experience_months": 48,
+      "destination": "Germany",
+      "goal_type": "placement",
+      "german_level": "B2",
+      "source_channel": "WhatsApp",
+      "last_contacted": "2026-09-22",
+      "days_since_contact": 2,
+      "conversation": "Got my B2 certificate last month. Please call me this week, I want to start the job process.",
+      "tags": [],
+      "merged_ids": [],
+      "prefilter": {
+        "not_a_fit": false,
+        "reason": null
+      }
+    },
+    "gates": [
+      {
+        "stage": "intake",
+        "pass": true,
+        "reason": "Row parsed"
+      },
+      {
+        "stage": "clean",
+        "pass": true,
+        "reason": "Clean"
+      },
+      {
+        "stage": "classify",
+        "pass": true,
+        "reason": "Relevant (confidence 1.00)"
+      },
+      {
+        "stage": "enrich",
+        "pass": true,
+        "reason": "All claims verified against source"
+      },
+      {
+        "stage": "prioritize",
+        "pass": true,
+        "reason": "Score 100 (high) + CALL NOW"
+      },
+      {
+        "stage": "outreach",
+        "pass": true,
+        "reason": "Passed checks (attempt 1)"
+      },
+      {
+        "stage": "ai_review",
+        "pass": true,
+        "reason": "Approved"
+      },
+      {
+        "stage": "human_approval",
+        "pass": false,
+        "reason": "Waiting for human"
+      }
+    ],
+    "column": "call_now",
+    "classify": {
+      "relevant": true,
+      "reason": {
+        "text": "The lead has a B.Sc Nursing degree and wants to work in Germany, matching Skillcase's target audience.",
+        "quote": "education: B.Sc Nursing"
+      },
+      "confidence": 1,
+      "confidence_raw": 1,
+      "track": "placement",
+      "flags": []
+    },
+    "enrich": {
+      "profile": [
+        {
+          "text": "Has a B.Sc Nursing degree",
+          "quote": "education: B.Sc Nursing"
+        },
+        {
+          "text": "Has 4 years of experience",
+          "quote": "experience: 4 yrs"
+        },
+        {
+          "text": "Holds a B2 German certificate",
+          "quote": "Got my B2 certificate last month."
+        }
+      ],
+      "needs": [
+        {
+          "text": "Assistance with the job process for Germany",
+          "quote": "I want to start the job process."
+        }
+      ],
+      "objections": [],
+      "intent": {
+        "text": "Wants to start the job process and requested a call this week",
+        "quote": "Please call me this week, I want to start the job process."
+      },
+      "intent_category": "ready_or_call_requested",
+      "missing_info": [
+        "Specific hospital preferences",
+        "Availability for start date"
+      ],
+      "opportunity": {
+        "text": "Lead is fully qualified with B.Sc Nursing, 4 years experience, and a B2 German certificate, making her ready for immediate placement.",
+        "quote": "Got my B2 certificate last month."
+      },
+      "next_step": "Call the lead this week to initiate the job placement process.",
+      "german_certified": true,
+      "call_requested": {
+        "text": "Explicitly asked for a call this week",
+        "quote": "Please call me this week, I want to start the job process."
+      },
+      "blocker": "none",
+      "knowledge_refs": []
+    },
+    "priority": {
+      "score": 100,
+      "band": "high",
+      "reasons": [
+        "Intent (ready or call requested): +35",
+        "German B2 (certified +5): +25",
+        "Eligibility BSc Nursing, 4 yr: +20",
+        "Recency (2 days since contact): +10",
+        "Blockers (none): +10",
+        "CALL NOW: lead asked for a call 2 days ago — not yet done"
+      ],
+      "call_now": true,
+      "incomplete": false
+    },
+    "outreach": {
+      "channel": "whatsapp",
+      "message": "Hi Lakshmi, congratulations on earning your B2 certificate last month! Since you are ready to start the job process for Germany, Skillcase can connect you with employers and support your documentation and relocation. Let us set up a call this week to go over your next steps. How does Thursday at 4 PM work for you?",
+      "talking_points": [
+        "Discuss her B2 German proficiency and current nursing experience",
+        "Explain the Skillcase employer connection and documentation support process",
+        "Review available interview preparation and onboarding steps"
+      ],
+      "facts_used": [
+        {
+          "fact": "Lakshmi earned her B2 German certificate last month.",
+          "quote": "Got my B2 certificate last month.",
+          "verified": true
+        },
+        {
+          "fact": "Lakshmi wants to start the job process this week.",
+          "quote": "Please call me this week, I want to start the job process.",
+          "verified": true
+        }
+      ],
+      "attempts": 1
+    },
+    "review": {
+      "verdict": "approve",
+      "blind_verdict": "{\"relevant\":true,\"call_now\":true,\"main_objection\":\"none\"}",
+      "issues": []
+    }
+  },
+  {
+    "lead_id": "H02",
+    "source": {
+      "lead_id": "H02",
+      "name": "Imran Sheikh",
+      "phone": "+91 9812300002",
+      "email": "imran.s@email.com",
+      "city": "Bhopal",
+      "education": "BPT",
+      "experience": "3 years",
+      "goal": "Work in Germany",
+      "german_level": "A2",
+      "source": "Instagram",
+      "last_contacted": "2026-09-19",
+      "conversation": "I am a physiotherapist. Do you place physios in Germany or only nurses?"
+    },
+    "human_note": "holdout",
+    "clean": {
+      "name": "Imran Sheikh",
+      "first_name": "Imran",
+      "phone": "+919812300002",
+      "email": "imran.s@email.com",
+      "city": "Bhopal",
+      "education": "Physiotherapy",
+      "education_category": "allied_health",
+      "experience_months": 36,
+      "destination": "Germany",
+      "goal_type": "placement",
+      "german_level": "A2",
+      "source_channel": "Instagram",
+      "last_contacted": "2026-09-19",
+      "days_since_contact": 5,
+      "conversation": "I am a physiotherapist. Do you place physios in Germany or only nurses?",
+      "tags": [],
+      "merged_ids": [],
+      "prefilter": {
+        "not_a_fit": false,
+        "reason": null
+      }
+    },
+    "gates": [
+      {
+        "stage": "intake",
+        "pass": true,
+        "reason": "Row parsed"
+      },
+      {
+        "stage": "clean",
+        "pass": true,
+        "reason": "Clean"
+      },
+      {
+        "stage": "classify",
+        "pass": true,
+        "reason": "Relevant (confidence 0.80, capped from 1.00)"
+      },
+      {
+        "stage": "enrich",
+        "pass": true,
+        "reason": "All claims verified against source"
+      },
+      {
+        "stage": "prioritize",
+        "pass": true,
+        "reason": "Score 57 (medium)"
+      },
+      {
+        "stage": "outreach",
+        "pass": true,
+        "reason": "Passed checks (attempt 1)"
+      },
+      {
+        "stage": "ai_review",
+        "pass": true,
+        "reason": "Approved"
+      },
+      {
+        "stage": "human_approval",
+        "pass": false,
+        "reason": "Waiting for human"
+      }
+    ],
+    "column": "ready",
+    "classify": {
+      "relevant": true,
+      "reason": {
+        "text": "The lead is a physiotherapist wanting to work in Germany, which qualifies as an allied health professional targeting Europe.",
+        "quote": "goal: Work in Germany"
+      },
+      "confidence": 0.8,
+      "confidence_raw": 1,
+      "track": "placement",
+      "flags": [
+        "role_fit_check"
+      ]
+    },
+    "enrich": {
+      "profile": [
+        {
+          "text": "The lead has a BPT education.",
+          "quote": "education: BPT"
+        },
+        {
+          "text": "The lead has 3 years of experience.",
+          "quote": "experience: 3 years"
+        },
+        {
+          "text": "The lead has A2 level German.",
+          "quote": "german_level: A2"
+        }
+      ],
+      "needs": [
+        {
+          "text": "Information regarding placement services for allied health professionals such as physiotherapists.",
+          "quote": "conversation: I am a physiotherapist. Do you place physios in Germany or only nurses?"
+        }
+      ],
+      "objections": [],
+      "intent": {
+        "text": "The lead is asking whether Skillcase places physiotherapists in Germany or only nurses.",
+        "quote": "conversation: I am a physiotherapist. Do you place physios in Germany or only nurses?"
+      },
+      "intent_category": "asked_jobs_or_process",
+      "missing_info": [
+        "Exact certification status of German language",
+        "Timeline and specific documentation details"
+      ],
+      "opportunity": {
+        "text": "The lead is an experienced physiotherapist with A2 German looking to work in Germany.",
+        "quote": "goal: Work in Germany"
+      },
+      "next_step": "Clarify whether Skillcase supports physiotherapists or only nurses, and guide them on allied health placement options if applicable.",
+      "german_certified": false,
+      "call_requested": null,
+      "blocker": "none",
+      "knowledge_refs": []
+    },
+    "priority": {
+      "score": 57,
+      "band": "medium",
+      "reasons": [
+        "Intent (asked jobs or process): +25",
+        "German A2 (claimed, not certified): +6",
+        "Eligibility conditional (Physiotherapy, 36 months): +10",
+        "Recency (5 days since contact): +6",
+        "Blockers (none): +10"
+      ],
+      "call_now": false,
+      "incomplete": false
+    },
+    "outreach": {
+      "channel": "whatsapp",
+      "message": "Hi Imran, thanks for asking about your options. Skillcase connects Indian healthcare professionals, including physiotherapists with your background, with opportunities in Germany. For your profession as a physiotherapist, we support you with the necessary qualification recognition process, documentation, and language training. Would you be open to a quick call this week so our counselor can share the next steps?",
+      "facts_used": [
+        {
+          "fact": "Imran is a physiotherapist with 3 years of experience.",
+          "quote": "I am a physiotherapist. Do you place physios in Germany or only nurses?",
+          "verified": true
+        },
+        {
+          "fact": "Imran is based in Bhopal with an A2 German level.",
+          "quote": "city: Bhopal",
+          "verified": true
+        }
+      ],
+      "attempts": 1
+    },
+    "review": {
+      "verdict": "approve",
+      "blind_verdict": "{\"relevant\":true,\"call_now\":false,\"main_objection\":\"The lead is questioning if the service scope includes physiotherapists or is limited to nurses.\"}",
+      "issues": []
+    }
+  },
+  {
+    "lead_id": "H03",
+    "source": {
+      "lead_id": "H03",
+      "name": "Tanvi Desai",
+      "phone": "+91 9812300003",
+      "email": "tanvi.d@email.com",
+      "city": "Surat",
+      "education": "BCom",
+      "experience": "2 years",
+      "goal": "Work in Germany",
+      "german_level": "",
+      "source": "Facebook",
+      "last_contacted": "2026-09-18",
+      "conversation": "Looking for any job in Germany, office work is fine."
+    },
+    "human_note": "holdout",
+    "clean": {
+      "name": "Tanvi Desai",
+      "first_name": "Tanvi",
+      "phone": "+919812300003",
+      "email": "tanvi.d@email.com",
+      "city": "Surat",
+      "education": "Business",
+      "education_category": "non_healthcare",
+      "experience_months": 24,
+      "destination": "Germany",
+      "goal_type": "placement",
+      "german_level": null,
+      "source_channel": "Facebook",
+      "last_contacted": "2026-09-18",
+      "days_since_contact": 6,
+      "conversation": "Looking for any job in Germany, office work is fine.",
+      "tags": [
+        "missing_german_level"
+      ],
+      "merged_ids": [],
+      "prefilter": {
+        "not_a_fit": true,
+        "reason": "Non-healthcare background (BCom)"
+      }
+    },
+    "gates": [
+      {
+        "stage": "intake",
+        "pass": true,
+        "reason": "Row parsed"
+      },
+      {
+        "stage": "clean",
+        "pass": true,
+        "reason": "Rule pre-filter: Non-healthcare background (BCom) | tags: missing_german_level"
+      },
+      {
+        "stage": "classify",
+        "pass": true,
+        "reason": "Not Relevant (confidence 1.00) | AI agrees with hard rule"
+      },
+      {
+        "stage": "enrich",
+        "pass": true,
+        "reason": "All claims verified against source"
+      },
+      {
+        "stage": "outreach",
+        "pass": true,
+        "reason": "Not a Fit: template close-out (no AI)"
+      },
+      {
+        "stage": "ai_review",
+        "pass": true,
+        "reason": "Approved"
+      },
+      {
+        "stage": "human_approval",
+        "pass": false,
+        "reason": "Waiting for human"
+      }
+    ],
+    "column": "not_a_fit",
+    "classify": {
+      "relevant": false,
+      "reason": {
+        "text": "The lead has a non-healthcare educational background in BCom and is looking for office work rather than healthcare roles.",
+        "quote": "education: BCom"
+      },
+      "confidence": 1,
+      "confidence_raw": 1,
+      "track": "placement",
+      "flags": []
+    },
+    "enrich": {
+      "profile": [
+        {
+          "text": "Lead has a BCom education.",
+          "quote": "education: BCom"
+        },
+        {
+          "text": "Lead has 2 years of experience.",
+          "quote": "experience: 2 years"
+        },
+        {
+          "text": "Lead's goal is to work in Germany.",
+          "quote": "goal: Work in Germany"
+        }
+      ],
+      "needs": [],
+      "objections": [],
+      "intent": {
+        "text": "Lead is looking for any job in Germany, specifically office work.",
+        "quote": "Looking for any job in Germany, office work is fine."
+      },
+      "intent_category": "exploring",
+      "missing_info": [],
+      "opportunity": {
+        "text": "The lead wants to relocate to Germany.",
+        "quote": "goal: Work in Germany"
+      },
+      "next_step": "Close lead as irrelevant due to non-healthcare background.",
+      "german_certified": false,
+      "call_requested": null,
+      "blocker": "none",
+      "knowledge_refs": []
+    },
+    "outreach": {
+      "channel": "whatsapp",
+      "message": "Hi Tanvi, thank you for your interest in Skillcase. We currently focus on helping healthcare professionals build careers in Germany and Europe, so we may not be the right fit for your goals right now. We wish you all the best, and you're welcome to reach out if your plans change.",
+      "attempts": 0
+    },
+    "review": {
+      "verdict": "approve",
+      "blind_verdict": "{\"relevant\":false,\"call_now\":false,\"main_objection\":\"Lead is looking for general office work, not healthcare roles.\"}",
+      "issues": []
+    }
+  },
+  {
+    "lead_id": "H04",
+    "source": {
+      "lead_id": "H04",
+      "name": "Joseph Mathew",
+      "phone": "+91 9812300004",
+      "email": "joseph.m@email.com",
+      "city": "Kottayam",
+      "education": "GNM",
+      "experience": "5 years",
+      "goal": "Work in Australia",
+      "german_level": "B1",
+      "source": "Referral",
+      "last_contacted": "2026-09-20",
+      "conversation": "Mainly looking at Australia but open to other countries if it pays well."
+    },
+    "human_note": "holdout",
+    "clean": {
+      "name": "Joseph Mathew",
+      "first_name": "Joseph",
+      "phone": "+919812300004",
+      "email": "joseph.m@email.com",
+      "city": "Kottayam",
+      "education": "GNM",
+      "education_category": "nursing_diploma",
+      "experience_months": 60,
+      "destination": "Australia",
+      "goal_type": "placement",
+      "german_level": "B1",
+      "source_channel": "Referral",
+      "last_contacted": "2026-09-20",
+      "days_since_contact": 4,
+      "conversation": "Mainly looking at Australia but open to other countries if it pays well.",
+      "tags": [],
+      "merged_ids": [],
+      "prefilter": {
+        "not_a_fit": true,
+        "reason": "Target country is Australia (outside Europe)"
+      }
+    },
+    "gates": [
+      {
+        "stage": "intake",
+        "pass": true,
+        "reason": "Row parsed"
+      },
+      {
+        "stage": "clean",
+        "pass": true,
+        "reason": "Rule pre-filter: Target country is Australia (outside Europe)"
+      },
+      {
+        "stage": "classify",
+        "pass": false,
+        "reason": "Not Relevant (confidence 0.60, capped from 0.80) | AI says Relevant but rule says Not a Fit (Target country is Australia (outside Europe))"
+      },
+      {
+        "stage": "enrich",
+        "pass": true,
+        "reason": "All claims verified against source"
+      },
+      {
+        "stage": "outreach",
+        "pass": true,
+        "reason": "Not a Fit: template close-out (no AI)"
+      },
+      {
+        "stage": "ai_review",
+        "pass": false,
+        "reason": "classify: The pipeline marked the lead as irrelevant (false) despite the lead explicitly stating they are open to other countries (Europe) if the pay is good, which fits the Skillcase scope. | outreach: The outreach message incorrectly states that Skillcase may not be the right fit and dismisses the lead, despite the lead being a qualified nurse open to European opportunities. | classify: Blind reviewer judged relevant=true, pipeline said false"
+      },
+      {
+        "stage": "human_approval",
+        "pass": false,
+        "reason": "Waiting for human"
+      }
+    ],
+    "column": "needs_review",
+    "classify": {
+      "relevant": false,
+      "reason": {
+        "text": "The lead has a nursing background (GNM) and is open to working in Europe if the pay is good.",
+        "quote": "goal: Work in Australia"
+      },
+      "confidence": 0.6,
+      "confidence_raw": 0.8,
+      "track": "placement",
+      "flags": [
+        "qualification_check",
+        "market_check"
+      ]
+    },
+    "enrich": {
+      "profile": [
+        {
+          "text": "The lead holds a GNM nursing diploma.",
+          "quote": "education: GNM"
+        },
+        {
+          "text": "The lead has 5 years of experience.",
+          "quote": "experience: 5 years"
+        },
+        {
+          "text": "The lead has a German level of B1.",
+          "quote": "german_level: B1"
+        }
+      ],
+      "needs": [
+        {
+          "text": "Information on job opportunities and pay in Germany or Europe.",
+          "quote": "conversation: Mainly looking at Australia but open to other countries if it pays well."
+        }
+      ],
+      "objections": [],
+      "intent": {
+        "text": "The lead is primarily looking at Australia but is open to other countries for good pay.",
+        "quote": "conversation: Mainly looking at Australia but open to other countries if it pays well."
+      },
+      "intent_category": "exploring",
+      "missing_info": [
+        "Specific salary expectations",
+        "Timeline for moving"
+      ],
+      "opportunity": {
+        "text": "Experienced GNM nurse with B1 German open to Europe if compensation is attractive.",
+        "quote": "conversation: Mainly looking at Australia but open to other countries if it pays well."
+      },
+      "next_step": "Reach out to discuss European nursing opportunities, salary potential, and how Skillcase can support placement in Germany.",
+      "german_certified": false,
+      "call_requested": null,
+      "blocker": "none",
+      "knowledge_refs": []
+    },
+    "outreach": {
+      "channel": "whatsapp",
+      "message": "Hi Joseph, thank you for your interest in Skillcase. We currently focus on helping healthcare professionals build careers in Germany and Europe, so we may not be the right fit for your goals right now. We wish you all the best, and you're welcome to reach out if your plans change.",
+      "attempts": 0
+    },
+    "review": {
+      "verdict": "flag",
+      "blind_verdict": "{\"relevant\":true,\"call_now\":false,\"main_objection\":\"Primary interest is Australia, not Germany/Europe.\"}",
+      "issues": [
+        {
+          "stage": "classify",
+          "problem": "The pipeline marked the lead as irrelevant (false) despite the lead explicitly stating they are open to other countries (Europe) if the pay is good, which fits the Skillcase scope.",
+          "severity": "high"
+        },
+        {
+          "stage": "outreach",
+          "problem": "The outreach message incorrectly states that Skillcase may not be the right fit and dismisses the lead, despite the lead being a qualified nurse open to European opportunities.",
+          "severity": "high"
+        },
+        {
+          "stage": "classify",
+          "problem": "Blind reviewer judged relevant=true, pipeline said false",
+          "severity": "high"
+        }
+      ]
+    }
+  },
+  {
+    "lead_id": "H05",
+    "source": {
+      "lead_id": "H05",
+      "name": "Farida Begum",
+      "phone": "+91 9812300005",
+      "email": "",
+      "city": "Hyderabad",
+      "education": "BSc Nursing",
+      "experience": "1.5 years",
+      "goal": "Work in Germany",
+      "german_level": "B1",
+      "source": "Website",
+      "last_contacted": "2026-09-10",
+      "conversation": "Interested but my family is worried about safety and I need to know if I can take my child along."
+    },
+    "human_note": "holdout",
+    "clean": {
+      "name": "Farida Begum",
+      "first_name": "Farida",
+      "phone": "+919812300005",
+      "email": null,
+      "city": "Hyderabad",
+      "education": "BSc Nursing",
+      "education_category": "nursing_degree",
+      "experience_months": 18,
+      "destination": "Germany",
+      "goal_type": "placement",
+      "german_level": "B1",
+      "source_channel": "Website",
+      "last_contacted": "2026-09-10",
+      "days_since_contact": 14,
+      "conversation": "Interested but my family is worried about safety and I need to know if I can take my child along.",
+      "tags": [
+        "missing_email"
+      ],
+      "merged_ids": [],
+      "prefilter": {
+        "not_a_fit": false,
+        "reason": null
+      }
+    },
+    "gates": [
+      {
+        "stage": "intake",
+        "pass": true,
+        "reason": "Row parsed"
+      },
+      {
+        "stage": "clean",
+        "pass": true,
+        "reason": "Passed with tags: missing_email"
+      },
+      {
+        "stage": "classify",
+        "pass": true,
+        "reason": "Relevant (confidence 1.00)"
+      },
+      {
+        "stage": "enrich",
+        "pass": true,
+        "reason": "All claims verified against source"
+      },
+      {
+        "stage": "prioritize",
+        "pass": true,
+        "reason": "Score 49 (medium)"
+      },
+      {
+        "stage": "outreach",
+        "pass": true,
+        "reason": "Passed checks (attempt 1)"
+      },
+      {
+        "stage": "ai_review",
+        "pass": true,
+        "reason": "Approved"
+      },
+      {
+        "stage": "human_approval",
+        "pass": false,
+        "reason": "Waiting for human"
+      }
+    ],
+    "column": "nurture",
+    "classify": {
+      "relevant": true,
+      "reason": {
+        "text": "The lead has a nursing degree and her goal is to work in Germany.",
+        "quote": "goal: Work in Germany"
+      },
+      "confidence": 1,
+      "confidence_raw": 1,
+      "track": "placement",
+      "flags": []
+    },
+    "enrich": {
+      "profile": [
+        {
+          "text": "The lead has a BSc Nursing education.",
+          "quote": "education: BSc Nursing"
+        },
+        {
+          "text": "The lead has 1.5 years of experience.",
+          "quote": "experience: 1.5 years"
+        },
+        {
+          "text": "The lead has a German level of B1.",
+          "quote": "german_level: B1"
+        }
+      ],
+      "needs": [
+        {
+          "text": "The lead needs information on family reunification/taking her child along.",
+          "quote": "conversation: Interested but my family is worried about safety and I need to know if I can take my child along."
+        }
+      ],
+      "objections": [
+        {
+          "text": "Family is worried about safety.",
+          "quote": "conversation: Interested but my family is worried about safety and I need to know if I can take my child along.",
+          "type": "confidence"
+        }
+      ],
+      "intent": {
+        "text": "The lead is interested in working in Germany.",
+        "quote": "conversation: Interested but my family is worried about safety and I need to know if I can take my child along."
+      },
+      "intent_category": "exploring",
+      "missing_info": [
+        "Family relocation and dependent visa process details"
+      ],
+      "opportunity": {
+        "text": "The lead already has a BSc Nursing qualification and B1 German, making her a strong candidate for placement in Germany.",
+        "quote": "education: BSc Nursing"
+      },
+      "next_step": "Contact the lead to address family safety concerns and explain the process for bringing dependents to Germany.",
+      "german_certified": false,
+      "call_requested": null,
+      "blocker": "soft",
+      "knowledge_refs": []
+    },
+    "priority": {
+      "score": 49,
+      "band": "medium",
+      "reasons": [
+        "Intent (exploring): +10",
+        "German B1 (claimed, not certified): +12",
+        "Eligibility BSc Nursing, 2 yr: +20",
+        "Recency (14 days since contact): +2",
+        "Blockers (soft): +5"
+      ],
+      "call_now": false,
+      "incomplete": false
+    },
+    "outreach": {
+      "channel": "whatsapp",
+      "message": "Hi Farida. Moving abroad with family is a big step, and it is completely normal for your family to worry about safety. You can indeed bring your child along to Germany through family reunification once you settle. At Skillcase, we support Indian nurses with documentation, relocation, and settling in safely. Would you like some guidance on how the family process works?",
+      "facts_used": [
+        {
+          "fact": "The lead's family is worried about safety",
+          "quote": "family is worried about safety",
+          "verified": true
+        },
+        {
+          "fact": "The lead wants to know if she can take her child along",
+          "quote": "I need to know if I can take my child along",
+          "verified": true
+        }
+      ],
+      "attempts": 1
+    },
+    "review": {
+      "verdict": "approve",
+      "blind_verdict": "{\"relevant\":true,\"call_now\":false,\"main_objection\":\"Family safety concerns and uncertainty regarding dependent relocation (child).\"}",
+      "issues": []
+    }
+  },
+  {
+    "lead_id": "H06",
+    "source": {
+      "lead_id": "H06",
+      "name": "Rakesh Nair",
+      "phone": "+91 9812300006",
+      "email": "rakesh.n@email.com",
+      "city": "Pune",
+      "education": "BSc Nursing",
+      "experience": "2 years",
+      "goal": "Work in Germany",
+      "german_level": "B1",
+      "source": "Instagram",
+      "last_contacted": "2026-09-21",
+      "conversation": "Will I get a fixed salary of 3 lakh per month and a guaranteed job within 3 months?"
+    },
+    "human_note": "holdout",
+    "clean": {
+      "name": "Rakesh Nair",
+      "first_name": "Rakesh",
+      "phone": "+919812300006",
+      "email": "rakesh.n@email.com",
+      "city": "Pune",
+      "education": "BSc Nursing",
+      "education_category": "nursing_degree",
+      "experience_months": 24,
+      "destination": "Germany",
+      "goal_type": "placement",
+      "german_level": "B1",
+      "source_channel": "Instagram",
+      "last_contacted": "2026-09-21",
+      "days_since_contact": 3,
+      "conversation": "Will I get a fixed salary of 3 lakh per month and a guaranteed job within 3 months?",
+      "tags": [],
+      "merged_ids": [],
+      "prefilter": {
+        "not_a_fit": false,
+        "reason": null
+      }
+    },
+    "gates": [
+      {
+        "stage": "intake",
+        "pass": true,
+        "reason": "Row parsed"
+      },
+      {
+        "stage": "clean",
+        "pass": true,
+        "reason": "Clean"
+      },
+      {
+        "stage": "classify",
+        "pass": true,
+        "reason": "Relevant (confidence 0.80, capped from 1.00)"
+      },
+      {
+        "stage": "enrich",
+        "pass": true,
+        "reason": "All claims verified against source"
+      },
+      {
+        "stage": "prioritize",
+        "pass": true,
+        "reason": "Score 72 (high)"
+      },
+      {
+        "stage": "outreach",
+        "pass": false,
+        "reason": "Failed after retry: Banned phrase: affirmative \"guarantee\""
+      },
+      {
+        "stage": "ai_review",
+        "pass": true,
+        "reason": "Approved"
+      },
+      {
+        "stage": "human_approval",
+        "pass": false,
+        "reason": "Waiting for human"
+      }
+    ],
+    "column": "needs_review",
+    "classify": {
+      "relevant": true,
+      "reason": {
+        "text": "The lead has a nursing background and wants to work in Germany.",
+        "quote": "education: BSc Nursing"
+      },
+      "confidence": 0.8,
+      "confidence_raw": 1,
+      "track": "placement",
+      "flags": [
+        "expectation_risk"
+      ]
+    },
+    "enrich": {
+      "profile": [
+        {
+          "text": "The lead has a BSc Nursing degree.",
+          "quote": "education: BSc Nursing"
+        },
+        {
+          "text": "The lead has 2 years of experience.",
+          "quote": "experience: 2 years"
+        },
+        {
+          "text": "The lead has B1 level German.",
+          "quote": "german_level: B1"
+        },
+        {
+          "text": "The lead's goal is to work in Germany.",
+          "quote": "goal: Work in Germany"
+        }
+      ],
+      "needs": [
+        {
+          "text": "Information regarding job placement and salary expectations in Germany.",
+          "quote": "Will I get a fixed salary of 3 lakh per month and a guaranteed job within 3 months?"
+        }
+      ],
+      "objections": [
+        {
+          "text": "Unrealistic expectations about salary and timeline guarantees.",
+          "quote": "Will I get a fixed salary of 3 lakh per month and a guaranteed job within 3 months?",
+          "type": "expectation"
+        }
+      ],
+      "intent": {
+        "text": "The lead is asking about getting a guaranteed job and a fixed high salary.",
+        "quote": "Will I get a fixed salary of 3 lakh per month and a guaranteed job within 3 months?"
+      },
+      "intent_category": "asked_jobs_or_process",
+      "missing_info": [
+        "Exact timeline for recognition and placement",
+        "Specific salary details"
+      ],
+      "opportunity": {
+        "text": "The lead is a qualified BSc nurse with B1 German looking to move to Germany.",
+        "quote": "goal: Work in Germany"
+      },
+      "next_step": "Clarify that placement timelines and salaries cannot be guaranteed and require a counselor consultation, while emphasizing the B2 German requirement for recognition.",
+      "german_certified": false,
+      "call_requested": null,
+      "blocker": "soft",
+      "knowledge_refs": []
+    },
+    "priority": {
+      "score": 72,
+      "band": "high",
+      "reasons": [
+        "Intent (asked jobs or process): +25",
+        "German B1 (claimed, not certified): +12",
+        "Eligibility BSc Nursing, 2 yr: +20",
+        "Recency (3 days since contact): +10",
+        "Blockers (soft): +5"
+      ],
+      "call_now": false,
+      "incomplete": false
+    },
+    "outreach": {
+      "channel": "whatsapp",
+      "message": "Hi Rakesh, I saw your query from Pune regarding working as a nurse in Germany. While job offers and exact compensation are decided by German employers rather than guaranteed, Skillcase supports your journey with language training, documentation, and interview preparation. Since you already have B1 German and your BSc Nursing, we can help you navigate the recognition process effectively. Would you be open to a quick call tomorrow to discuss how our team can support your move?",
+      "facts_used": [
+        {
+          "fact": "Lead is based in Pune",
+          "quote": "Pune",
+          "verified": true
+        },
+        {
+          "fact": "Lead has B1 German proficiency",
+          "quote": "B1",
+          "verified": true
+        }
+      ],
+      "attempts": 2
+    },
+    "review": {
+      "verdict": "approve",
+      "blind_verdict": "{\"relevant\":true,\"call_now\":false,\"main_objection\":\"Unrealistic expectations regarding salary and job placement timelines.\"}",
+      "issues": []
+    }
+  },
+  {
+    "lead_id": "H07",
+    "source": {
+      "lead_id": "H07",
+      "name": "Sunita Yadav",
+      "phone": "+91 9812300007",
+      "email": "sunita.y@email.com",
+      "city": "Lucknow",
+      "education": "B.Sc. Nursing",
+      "experience": "3 Years",
+      "goal": "Work in Germany",
+      "german_level": "B2",
+      "source": "WhatsApp",
+      "last_contacted": "2026-09-21",
+      "conversation": "B2 certified, 3 years in ICU. Asked about open positions."
+    },
+    "human_note": "holdout",
+    "clean": {
+      "name": "Sunita Yadav",
+      "first_name": "Sunita",
+      "phone": "+919812300007",
+      "email": "sunita.y@email.com",
+      "city": "Lucknow",
+      "education": "BSc Nursing",
+      "education_category": "nursing_degree",
+      "experience_months": 36,
+      "destination": "Germany",
+      "goal_type": "placement",
+      "german_level": "B2",
+      "source_channel": "WhatsApp",
+      "last_contacted": "2026-09-21",
+      "days_since_contact": 3,
+      "conversation": "B2 certified, 3 years in ICU. Asked about open positions.",
+      "tags": [],
+      "merged_ids": [
+        "H08"
+      ],
+      "prefilter": {
+        "not_a_fit": false,
+        "reason": null
+      }
+    },
+    "gates": [
+      {
+        "stage": "intake",
+        "pass": true,
+        "reason": "Row parsed"
+      },
+      {
+        "stage": "clean",
+        "pass": true,
+        "reason": "Clean"
+      },
+      {
+        "stage": "classify",
+        "pass": true,
+        "reason": "Relevant (confidence 1.00)"
+      },
+      {
+        "stage": "enrich",
+        "pass": true,
+        "reason": "All claims verified against source"
+      },
+      {
+        "stage": "prioritize",
+        "pass": true,
+        "reason": "Score 90 (high)"
+      },
+      {
+        "stage": "outreach",
+        "pass": true,
+        "reason": "Passed checks (attempt 1)"
+      },
+      {
+        "stage": "ai_review",
+        "pass": true,
+        "reason": "Approved"
+      },
+      {
+        "stage": "human_approval",
+        "pass": false,
+        "reason": "Waiting for human"
+      }
+    ],
+    "column": "ready",
+    "classify": {
+      "relevant": true,
+      "reason": {
+        "text": "The lead has a nursing degree and aims to work in Germany.",
+        "quote": "goal: Work in Germany"
+      },
+      "confidence": 1,
+      "confidence_raw": 1,
+      "track": "placement",
+      "flags": []
+    },
+    "enrich": {
+      "profile": [
+        {
+          "text": "Education is B.Sc. Nursing",
+          "quote": "education: B.Sc. Nursing"
+        },
+        {
+          "text": "Has 3 years of experience",
+          "quote": "experience: 3 Years"
+        },
+        {
+          "text": "German level is B2 certified",
+          "quote": "conversation: B2 certified, 3 years in ICU. Asked about open positions."
+        }
+      ],
+      "needs": [
+        {
+          "text": "Placement support for jobs in Germany",
+          "quote": "goal: Work in Germany"
+        }
+      ],
+      "objections": [],
+      "intent": {
+        "text": "Inquired about open positions in Germany",
+        "quote": "conversation: B2 certified, 3 years in ICU. Asked about open positions."
+      },
+      "intent_category": "asked_jobs_or_process",
+      "missing_info": [
+        "Medical fitness status",
+        "Certificate of good conduct status"
+      ],
+      "opportunity": {
+        "text": "Lead is fully qualified with a B.Sc. Nursing, 3 years ICU experience, and B2 German certification.",
+        "quote": "conversation: B2 certified, 3 years in ICU. Asked about open positions."
+      },
+      "next_step": "Share information about current open positions in Germany and discuss placement procedures.",
+      "german_certified": true,
+      "call_requested": null,
+      "blocker": "none",
+      "knowledge_refs": []
+    },
+    "priority": {
+      "score": 90,
+      "band": "high",
+      "reasons": [
+        "Intent (asked jobs or process): +25",
+        "German B2 (certified +5): +25",
+        "Eligibility BSc Nursing, 3 yr: +20",
+        "Recency (3 days since contact): +10",
+        "Blockers (none): +10"
+      ],
+      "call_now": false,
+      "incomplete": false
+    },
+    "outreach": {
+      "channel": "whatsapp",
+      "message": "Hi Sunita! Since you are B2 certified and have 3 years in ICU, you are in a great position to explore roles in Germany. Skillcase can connect you with potential employers and help with documentation and relocation, though hiring decisions rest with the employers. Our counselor can share details on a call. Would you be free for a brief chat tomorrow?",
+      "facts_used": [
+        {
+          "fact": "Sunita is B2 certified in German",
+          "quote": "B2 certified",
+          "verified": true
+        },
+        {
+          "fact": "Sunita has 3 years of experience in ICU",
+          "quote": "3 years in ICU",
+          "verified": true
+        }
+      ],
+      "attempts": 1
+    },
+    "review": {
+      "verdict": "approve",
+      "blind_verdict": "{\"relevant\":true,\"call_now\":false,\"main_objection\":\"none\"}",
+      "issues": []
+    }
+  },
+  {
+    "lead_id": "H08",
+    "source": {
+      "lead_id": "H08",
+      "name": "sunita yadav",
+      "phone": "+91-98123-00007",
+      "email": "Sunita.Y@email.com",
+      "city": "Lucknow",
+      "education": "BSc Nursing",
+      "experience": "3 yrs",
+      "goal": "Germany job",
+      "german_level": "B2",
+      "source": "Instagram",
+      "last_contacted": "2026-09-21",
+      "conversation": "Asked about open positions."
+    },
+    "human_note": "holdout",
+    "clean": {
+      "name": "Sunita Yadav",
+      "first_name": "Sunita",
+      "phone": "+919812300007",
+      "email": "sunita.y@email.com",
+      "city": "Lucknow",
+      "education": "BSc Nursing",
+      "education_category": "nursing_degree",
+      "experience_months": 36,
+      "destination": "Germany",
+      "goal_type": "placement",
+      "german_level": "B2",
+      "source_channel": "Instagram",
+      "last_contacted": "2026-09-21",
+      "days_since_contact": 3,
+      "conversation": "Asked about open positions.",
+      "tags": [],
+      "merged_ids": [],
+      "prefilter": {
+        "not_a_fit": false,
+        "reason": null
+      }
+    },
+    "gates": [
+      {
+        "stage": "intake",
+        "pass": true,
+        "reason": "Row parsed"
+      },
+      {
+        "stage": "clean",
+        "pass": false,
+        "reason": "Duplicate of H07 (phone + email match)"
+      }
+    ],
+    "column": "merged",
+    "duplicate_of": "H07"
+  },
+  {
+    "lead_id": "H09",
+    "source": {
+      "lead_id": "H09",
+      "name": "Kiran Joshi",
+      "phone": "",
+      "email": "",
+      "city": "Nagpur",
+      "education": "BSc Nursing",
+      "experience": "2 years",
+      "goal": "Work in Germany",
+      "german_level": "B1",
+      "source": "Website",
+      "last_contacted": "2026-09-20",
+      "conversation": "Wants to know the course duration and"
+    },
+    "human_note": "holdout",
+    "clean": {
+      "name": "Kiran Joshi",
+      "first_name": "Kiran",
+      "phone": null,
+      "email": null,
+      "city": "Nagpur",
+      "education": "BSc Nursing",
+      "education_category": "nursing_degree",
+      "experience_months": 24,
+      "destination": "Germany",
+      "goal_type": "placement",
+      "german_level": "B1",
+      "source_channel": "Website",
+      "last_contacted": "2026-09-20",
+      "days_since_contact": 4,
+      "conversation": "Wants to know the course duration and",
+      "tags": [
+        "missing_email",
+        "missing_phone",
+        "possible_truncation:conversation"
+      ],
+      "merged_ids": [],
+      "prefilter": {
+        "not_a_fit": false,
+        "reason": null
+      }
+    },
+    "gates": [
+      {
+        "stage": "intake",
+        "pass": true,
+        "reason": "Row parsed"
+      },
+      {
+        "stage": "clean",
+        "pass": false,
+        "reason": "no valid phone or email; conversation may be truncated"
+      },
+      {
+        "stage": "classify",
+        "pass": true,
+        "reason": "Relevant (confidence 1.00)"
+      },
+      {
+        "stage": "enrich",
+        "pass": true,
+        "reason": "All claims verified against source"
+      },
+      {
+        "stage": "prioritize",
+        "pass": true,
+        "reason": "Score 73 (high)"
+      },
+      {
+        "stage": "outreach",
+        "pass": true,
+        "reason": "Passed checks (attempt 1)"
+      },
+      {
+        "stage": "ai_review",
+        "pass": true,
+        "reason": "Approved"
+      },
+      {
+        "stage": "human_approval",
+        "pass": false,
+        "reason": "Waiting for human"
+      }
+    ],
+    "column": "needs_review",
+    "classify": {
+      "relevant": true,
+      "reason": {
+        "text": "The lead has a BSc Nursing background and wants to work in Germany, which matches Skillcase's target criteria.",
+        "quote": "goal: Work in Germany"
+      },
+      "confidence": 1,
+      "confidence_raw": 1,
+      "track": "placement",
+      "flags": []
+    },
+    "enrich": {
+      "profile": [
+        {
+          "text": "Education is BSc Nursing",
+          "quote": "education: BSc Nursing"
+        },
+        {
+          "text": "Experience is 2 years",
+          "quote": "experience: 2 years"
+        },
+        {
+          "text": "German level is B1",
+          "quote": "german_level: B1"
+        },
+        {
+          "text": "City is Nagpur",
+          "quote": "city: Nagpur"
+        }
+      ],
+      "needs": [
+        {
+          "text": "Information regarding course duration",
+          "quote": "conversation: Wants to know the course duration and"
+        }
+      ],
+      "objections": [],
+      "intent": {
+        "text": "Wants to know the course duration",
+        "quote": "conversation: Wants to know the course duration and"
+      },
+      "intent_category": "asked_jobs_or_process",
+      "missing_info": [
+        "phone number",
+        "email address"
+      ],
+      "opportunity": {
+        "text": "Lead has BSc Nursing, 2 years of experience, and B1 German, making her a strong candidate for placement in Germany.",
+        "quote": "education: BSc Nursing"
+      },
+      "next_step": "Reach out to provide information on course duration and discuss the Germany placement process, while asking for contact details.",
+      "german_certified": false,
+      "call_requested": null,
+      "blocker": "none",
+      "knowledge_refs": []
+    },
+    "priority": {
+      "score": 73,
+      "band": "high",
+      "reasons": [
+        "Intent (asked jobs or process): +25",
+        "German B1 (claimed, not certified): +12",
+        "Eligibility BSc Nursing, 2 yr: +20",
+        "Recency (4 days since contact): +6",
+        "Blockers (none): +10"
+      ],
+      "call_now": false,
+      "incomplete": false
+    },
+    "outreach": {
+      "channel": "whatsapp",
+      "message": "Hi Kiran, thanks for reaching out from Nagpur about working in Germany as a BSc Nursing graduate with B1 German. While timelines depend on individual progress and employer decisions, Skillcase supports you through language training, documentation, and relocation. Our counselor will gladly share all details on a call. Would you be open to a quick chat this week?",
+      "facts_used": [
+        {
+          "fact": "Location is Nagpur",
+          "quote": "city: Nagpur",
+          "verified": true
+        },
+        {
+          "fact": "Current German level is B1",
+          "quote": "german_level: B1",
+          "verified": true
+        }
+      ],
+      "attempts": 1
+    },
+    "review": {
+      "verdict": "approve",
+      "blind_verdict": "{\"relevant\":true,\"call_now\":false,\"main_objection\":\"none\"}",
+      "issues": []
+    }
+  },
+  {
+    "lead_id": "H10",
+    "source": {
+      "lead_id": "H10",
+      "name": "Ayesha Siddiqui",
+      "phone": "+91 9812300010",
+      "email": "ayesha.s@email.com",
+      "city": "Mumbai",
+      "education": "BSc Nursing",
+      "experience": "2 years",
+      "goal": "Just exploring",
+      "german_level": "A1",
+      "source": "Instagram",
+      "last_contacted": "2026-09-05",
+      "conversation": "Saw your ad, just curious what this is about."
+    },
+    "human_note": "holdout",
+    "clean": {
+      "name": "Ayesha Siddiqui",
+      "first_name": "Ayesha",
+      "phone": "+919812300010",
+      "email": "ayesha.s@email.com",
+      "city": "Mumbai",
+      "education": "BSc Nursing",
+      "education_category": "nursing_degree",
+      "experience_months": 24,
+      "destination": null,
+      "goal_type": "unknown",
+      "german_level": "A1",
+      "source_channel": "Instagram",
+      "last_contacted": "2026-09-05",
+      "days_since_contact": 19,
+      "conversation": "Saw your ad, just curious what this is about.",
+      "tags": [
+        "destination_unspecified"
+      ],
+      "merged_ids": [],
+      "prefilter": {
+        "not_a_fit": false,
+        "reason": null
+      }
+    },
+    "gates": [
+      {
+        "stage": "intake",
+        "pass": true,
+        "reason": "Row parsed"
+      },
+      {
+        "stage": "clean",
+        "pass": true,
+        "reason": "Passed with tags: destination_unspecified"
+      },
+      {
+        "stage": "classify",
+        "pass": false,
+        "reason": "Relevant (confidence 0.60, capped from 0.90)"
+      },
+      {
+        "stage": "enrich",
+        "pass": true,
+        "reason": "All claims verified against source"
+      },
+      {
+        "stage": "prioritize",
+        "pass": true,
+        "reason": "Score 45 (medium)"
+      },
+      {
+        "stage": "outreach",
+        "pass": true,
+        "reason": "Passed checks (attempt 2)"
+      },
+      {
+        "stage": "ai_review",
+        "pass": true,
+        "reason": "Approved"
+      },
+      {
+        "stage": "human_approval",
+        "pass": false,
+        "reason": "Waiting for human"
+      }
+    ],
+    "column": "needs_review",
+    "classify": {
+      "relevant": true,
+      "reason": {
+        "text": "The lead has a BSc Nursing degree and is exploring opportunities.",
+        "quote": "education: BSc Nursing"
+      },
+      "confidence": 0.6,
+      "confidence_raw": 0.9,
+      "track": "placement",
+      "flags": []
+    },
+    "enrich": {
+      "profile": [
+        {
+          "text": "Holds a BSc Nursing degree",
+          "quote": "education: BSc Nursing"
+        },
+        {
+          "text": "Has 2 years of experience",
+          "quote": "experience: 2 years"
+        },
+        {
+          "text": "Current German level is A1",
+          "quote": "german_level: A1"
+        }
+      ],
+      "needs": [
+        {
+          "text": "Needs an overview of the process and how Skillcase can assist with jobs in Germany",
+          "quote": "conversation: Saw your ad, just curious what this is about."
+        }
+      ],
+      "objections": [],
+      "intent": {
+        "text": "Just curious about the program and seeing what it is about",
+        "quote": "goal: Just exploring"
+      },
+      "intent_category": "exploring",
+      "missing_info": [
+        "Target country preference beyond general curiosity"
+      ],
+      "opportunity": {
+        "text": "Potential candidate for German placement after language training up to B2 level",
+        "quote": "KB:K1"
+      },
+      "next_step": "Send an introductory message explaining the Skillcase process for nurses moving to Germany and offer a brief overview.",
+      "german_certified": false,
+      "call_requested": null,
+      "blocker": "none",
+      "knowledge_refs": [
+        "KB:K1"
+      ]
+    },
+    "priority": {
+      "score": 45,
+      "band": "medium",
+      "reasons": [
+        "Intent (exploring): +10",
+        "German A1 (claimed, not certified): +3",
+        "Eligibility BSc Nursing, 2 yr: +20",
+        "Recency (19 days since contact): +2",
+        "Blockers (none): +10"
+      ],
+      "call_now": false,
+      "incomplete": false
+    },
+    "outreach": {
+      "channel": "whatsapp",
+      "message": "Hi Ayesha, thanks for reaching out from Mumbai. Since you have your BSc Nursing and are at A1 in German, you are right at the start! Skillcase helps Indian nurses move to Germany. We support your language training, documentation, and job placement. Full German B2 is needed for standard recognition, but a recognition partnership lets you work while completing it. Would you like to chat about how this works?",
+      "facts_used": [
+        {
+          "fact": "Ayesha is located in Mumbai",
+          "quote": "Mumbai",
+          "verified": true
+        },
+        {
+          "fact": "Ayesha has a BSc Nursing degree",
+          "quote": "BSc Nursing",
+          "verified": true
+        }
+      ],
+      "attempts": 2
+    },
+    "review": {
+      "verdict": "approve",
+      "blind_verdict": "{\"relevant\":true,\"call_now\":false,\"main_objection\":\"None, lead is just exploring\"}",
+      "issues": []
+    }
+  }
+]

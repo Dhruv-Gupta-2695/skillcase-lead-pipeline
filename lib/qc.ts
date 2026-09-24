@@ -138,7 +138,7 @@ export function qcOutreach(l: Lead, o: Outreach, channel: "whatsapp" | "email") 
   const words = o.message.trim().split(/\s+/).length;
   if (words > OUTREACH.maxWords[channel]) problems.push(`Too long: ${words} words (max ${OUTREACH.maxWords[channel]})`);
   if (!o.message.includes(l.clean.first_name)) problems.push(`Lead's first name "${l.clean.first_name}" not used`);
-  const verified = o.facts_used.filter((f) => verifyQuote(l, f.quote));
+  const verified = o.facts_used.filter((f) => !/^KB:/i.test(f.quote) && verifyQuote(l, f.quote)); // KB facts don't count as lead-specific
   if (verified.length < OUTREACH.minLeadFacts) problems.push(`Only ${verified.length} verified lead-specific facts (need ${OUTREACH.minLeadFacts})`);
   if (channel === "email" && !o.subject) problems.push("Email needs a subject line");
   if (l.priority?.call_now && (o.talking_points?.length ?? 0) !== 3) problems.push("Call Now lead needs exactly 3 talking points");

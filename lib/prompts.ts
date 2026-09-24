@@ -31,7 +31,8 @@ EVIDENCE RULES (strict — your output is checked by code)
 - confidence = how sure you are about relevance (0-1).
 - intent_category: ready_or_call_requested (ready to start or asked for a call), asked_jobs_or_process (asked about jobs, interviews, documents, process, eligibility, cost), exploring (just looking, early stage, no timeline).
 - blocker: hard = cannot proceed now (e.g. cannot afford now); soft = worry or open question (price, confidence, timeline); none.
-- next_step: one concrete action for the salesperson.`;
+- next_step: one concrete action for the salesperson.
+- When a claim relies on Germany's rules (language level, recognition, documents), cite it as "KB:<id>".`;
 
 export const analysisUser = (l: Lead) => `LEAD ROW:\n${rowText(l)}\n\nReturn your analysis using the tool.`;
 
@@ -43,6 +44,7 @@ RULES
 - Use the lead's first name. Warm, honest, not pushy. Plain English.
 - Open with their specific situation, answer their main question or objection, mention the relevant Skillcase support, end with ONE clear call to action.
 - Use at least ${OUTREACH.minLeadFacts} facts specific to this lead; list them in facts_used with an EXACT quote from their row.
+- If you use a fact about Germany's rules, also list it in facts_used with quote "KB:<id>" so the source can be shown.
 - NEVER promise or imply a guaranteed job, outcome or timeline. Never use: guarantee, assured, 100%, surely, definitely.
 - NEVER state prices, fees, salaries, installment terms or durations. Say "our counselor will share details on a call".
 - Never restate sensitive objections bluntly (e.g. do not write "you can't afford it" or "you're nervous"); reframe gently.

@@ -108,3 +108,5 @@ ul.plain { margin: 0; padding-left: 18px; }
   .board { grid-template-columns: 1fr; }
   .top, .stats, .board { padding-left: 16px; padding-right: 16px; }
 }
+
+.quote a { color: var(--scrub); }

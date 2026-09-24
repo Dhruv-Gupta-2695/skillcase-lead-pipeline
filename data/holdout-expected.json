@@ -1,0 +1,13 @@
+{
+  "_note": "Expected answers written BEFORE the holdout run. The system has never seen these leads.",
+  "H01": { "why": "B2 certified nurse explicitly asking for a call", "columns": ["call_now"], "relevant": true },
+  "H02": { "why": "Physiotherapist = allied health, Germany", "columns": ["ready", "nurture", "needs_review"], "relevant": true, "flags": ["role_fit_check"] },
+  "H03": { "why": "Commerce background, any office job", "columns": ["not_a_fit"], "relevant": false },
+  "H04": { "why": "Australia first; 'open to other countries' is ambiguous", "columns": ["not_a_fit", "needs_review"] },
+  "H05": { "why": "Nurse for Germany with family concerns; email missing but phone valid", "columns": ["ready", "nurture"], "relevant": true },
+  "H06": { "why": "Expects fixed salary and guaranteed job", "columns": ["ready", "needs_review", "nurture"], "relevant": true, "flags": ["expectation_risk"] },
+  "H07": { "why": "Certified B2, 3 yrs ICU, asked about positions", "columns": ["ready"], "relevant": true },
+  "H08": { "why": "Same person as H07: different case and phone format", "columns": ["merged"] },
+  "H09": { "why": "No phone or email, truncated conversation", "columns": ["needs_review"] },
+  "H10": { "why": "Just curious, A1, no timeline", "columns": ["nurture"], "relevant": true }
+}
